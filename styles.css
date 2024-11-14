@@ -13,6 +13,41 @@ body {
     align-items: center;
 }
 
+.welcome-heading {
+    text-align: center; /* Centers the text horizontally */
+    margin-top: 20px; /* Optional: Adds space above the heading */
+    font-size: 2.5em; /* Optional: Adjusts font size */
+    font-weight: bold; /* Optional: Makes the text bold */
+}
+
+.project-gallery {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.project-link {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project-image {
+    width: 200px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    object-fit: cover;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    border-radius: 8px; /* Optional rounded corners */
+}
+
+.project-link:hover .project-image {
+    transform: scale(1.1); /* Zoom effect on hover */
+    opacity: 0.8; /* Slight fade effect */
+}
+
 .about-image {
   width: 200px; /* Adjust width as needed */
   height: auto; /* Maintains aspect ratio */
@@ -59,6 +94,87 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #A56336;
+}
+
+.project-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.project-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.project-item:nth-child(even) {
+    flex-direction: row-reverse; /* Alternates image and description */
+}
+
+.project-image {
+    width: 250px; /* Adjust as needed */
+    height: 150px; /* Adjust as needed */
+    object-fit: cover;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    border-radius: 8px;
+}
+
+.project-description {
+    max-width: 500px;
+}
+
+.project-item:hover .project-image {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.project-description h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.project-description p {
+    margin: 10px 0 0;
+    font-size: 1em;
+}
+
+/* About Content Layout */
+.about-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; /* Space between text and image */
+    margin-bottom: 15px;
+}
+
+.about-content p {
+    flex: 1; /* Ensures the paragraph takes available space */
+}
+
+.about-image {
+    width: 200px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Resume Button Styling */
+.resume-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #A56336;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.resume-button:hover {
+    background-color: #B6A19E; /* Hover effect color */
 }
 
 /* Main Content Style */
