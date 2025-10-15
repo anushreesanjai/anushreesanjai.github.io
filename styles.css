@@ -1,247 +1,91 @@
-/* Importing Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+  color: white;
+}
 
 body {
-    font-family: 'Poppins', sans-serif;
-    color: #333333;
-    background-color: #FAF7F4;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background-color: #550000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow-x: hidden;
 }
 
-.welcome-heading {
-    text-align: center; /* Centers the text horizontally */
-    margin-top: 20px; /* Optional: Adds space above the heading */
-    font-size: 2.5em; /* Optional: Adjusts font size */
-    font-weight: bold; /* Optional: Makes the text bold */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 40px;
 }
 
-.project-gallery {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
+.nav-btn {
+  background-color: #280101;
+  border-radius: 50px;
+  padding: 10px 40px;
+  text-decoration: none;
+  font-size: 26px;
+  transition: all 0.3s ease;
 }
 
-.project-link {
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-    transition: transform 0.3s ease;
+.nav-btn:hover {
+  background-color: #3a0101;
+  transform: translateY(-3px);
 }
 
-.project-image {
-    width: 200px; /* Adjust as needed */
-    height: 200px; /* Adjust as needed */
-    object-fit: cover;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    border-radius: 8px; /* Optional rounded corners */
+.intro {
+  margin-top: 120px;
 }
 
-.project-link:hover .project-image {
-    transform: scale(1.1); /* Zoom effect on hover */
-    opacity: 0.8; /* Slight fade effect */
+.intro-text {
+  font-size: 32px;
+  line-height: 1.6;
 }
 
-.about-image {
-  width: 200px; /* Adjust width as needed */
-  height: auto; /* Maintains aspect ratio */
-  border-radius: 8px; /* Optional: rounds corners for a softer look */
-  margin: 15px 0; /* Adds some space around the image */
+.description {
+  margin-top: 40px;
+  font-size: 32px;
+  line-height: 1.6;
 }
 
-
-/* Main Title Style */
-.main-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 3em;
-    text-align: center;
-    color: #333333;
-    margin-top: 40px;
-    letter-spacing: 2px;
+.projects-section {
+  margin-top: 100px;
+  width: 100%;
 }
 
-/* Navigation Bar */
-nav {
-    background-color: #FAF7F4;
-    margin-top: 10px;
+.projects-title {
+  font-size: 56px;
+  margin-bottom: 60px;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    border-top: 1px solid #B6A19E;
-    border-bottom: 1px solid #B6A19E;
-    padding: 10px 0;
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+  padding-bottom: 120px;
 }
 
-nav ul li a {
-    font-family: 'Playfair Display', serif;
-    font-weight: 500;
-    color: #617073;
-    text-decoration: none;
-    font-size: 1.1em;
-    transition: color 0.3s;
+.project-card {
+  width: 70%;
+  max-width: 800px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #400000;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-nav ul li a:hover {
-    color: #A56336;
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-.project-section {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin-top: 20px;
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
 }
-
-.project-item {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.project-item:nth-child(even) {
-    flex-direction: row-reverse; /* Alternates image and description */
-}
-
-.project-image {
-    width: 250px; /* Adjust as needed */
-    height: 150px; /* Adjust as needed */
-    object-fit: cover;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    border-radius: 8px;
-}
-
-.project-description {
-    max-width: 500px;
-}
-
-.project-item:hover .project-image {
-    transform: scale(1.05);
-    opacity: 0.9;
-}
-
-.project-description h3 {
-    margin: 0;
-    font-size: 1.5em;
-}
-
-.project-description p {
-    margin: 10px 0 0;
-    font-size: 1em;
-}
-
-/* About Content Layout */
-.about-content {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px; /* Space between text and image */
-    margin-bottom: 15px;
-}
-
-.about-content p {
-    flex: 1; /* Ensures the paragraph takes available space */
-}
-
-.about-image {
-    width: 200px; /* Adjust size as needed */
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
-}
-
-/* Resume Button Styling */
-.resume-button {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    font-size: 1em;
-    color: #fff;
-    background-color: #A56336;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.resume-button:hover {
-    background-color: #B6A19E; /* Hover effect color */
-}
-
-/* Main Content Style */
-main {
-    width: 90%;
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: #FFFFFF;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2em;
-    color: #333333;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #A56336;
-    display: inline-block;
-}
-
-p, ul, li {
-    color: #617073;
-    font-size: 1em;
-    line-height: 1.8;
-}
-
-/* Button Style */
-a.button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 0.9em;
-    font-weight: 400;
-    color: #FFFFFF;
-    background-color: #A56336;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-}
-
-a.button:hover {
-    background-color: #B6A19E;
-}
-
-/* Footer Style */
-footer {
-    font-size: 0.8em;
-    text-align: center;
-    color: #617073;
-    padding: 10px 0;
-    margin-top: 40px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .main-title {
-        font-size: 2.5em;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    main {
-        padding: 20px;
-    }
-}
-
