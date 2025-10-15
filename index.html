@@ -4,36 +4,48 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anushree Sanjai – Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <nav class="navbar">
-    <a href="#home" class="nav-btn">home</a>
-    <a href="#projects" class="nav-btn">projects</a>
-    <a href="#about" class="nav-btn">about me</a>
+<body style="margin:0; padding:0; box-sizing:border-box; font-family:Helvetica, Arial, sans-serif; color:white; background-color:#550000; display:flex; flex-direction:column; align-items:center; text-align:center; overflow-x:hidden;">
+
+  <nav style="display:flex; justify-content:center; gap:60px; margin-top:40px;">
+    <a href="#home" style="background-color:#280101; border-radius:50px; padding:10px 40px; text-decoration:none; font-size:26px; transition:all 0.3s ease;" 
+       onmouseover="this.style.backgroundColor='#3a0101'; this.style.transform='translateY(-3px)';"
+       onmouseout="this.style.backgroundColor='#280101'; this.style.transform='translateY(0)';">home</a>
+    <a href="#projects" style="background-color:#280101; border-radius:50px; padding:10px 40px; text-decoration:none; font-size:26px; transition:all 0.3s ease;"
+       onmouseover="this.style.backgroundColor='#3a0101'; this.style.transform='translateY(-3px)';"
+       onmouseout="this.style.backgroundColor='#280101'; this.style.transform='translateY(0)';">projects</a>
+    <a href="#about" style="background-color:#280101; border-radius:50px; padding:10px 40px; text-decoration:none; font-size:26px; transition:all 0.3s ease;"
+       onmouseover="this.style.backgroundColor='#3a0101'; this.style.transform='translateY(-3px)';"
+       onmouseout="this.style.backgroundColor='#280101'; this.style.transform='translateY(0)';">about me</a>
   </nav>
 
-  <section class="intro" id="home">
-    <p class="intro-text">Nice to meet you,</p>
-    <p class="intro-text"><strong>My name is Anushree Sanjai</strong></p>
-    <p class="description">
+  <section id="home" style="margin-top:120px;">
+    <p style="font-size:32px; line-height:1.6;">Nice to meet you,</p>
+    <p style="font-size:32px; line-height:1.6;"><strong>My name is Anushree Sanjai</strong></p>
+    <p style="margin-top:40px; font-size:32px; line-height:1.6;">
       I design with people in mind by combining<br />
       psychology with strategy to create solutions that<br />
       are desirable, viable, and feasible
     </p>
   </section>
 
-  <section class="projects-section" id="projects">
-    <h2 class="projects-title">explore my projects</h2>
-    <div class="projects-container">
-      <div class="project-card" onclick="openProject(1)">
-        <img src="https://via.placeholder.com/600x350.png?text=Project+1" alt="Project 1" />
+  <section id="projects" style="margin-top:100px; width:100%;">
+    <h2 style="font-size:56px; margin-bottom:60px;">explore my projects</h2>
+    <div style="display:flex; flex-direction:column; gap:60px; align-items:center; padding-bottom:120px;">
+      <div onclick="openProject(1)" style="width:70%; max-width:800px; border-radius:20px; overflow:hidden; background-color:#400000; cursor:pointer; transition:transform 0.4s ease, box-shadow 0.4s ease;"
+           onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 30px rgba(0,0,0,0.3)';"
+           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+        <img src="https://via.placeholder.com/600x350.png?text=Project+1" alt="Project 1" style="width:100%; height:auto; display:block;" />
       </div>
-      <div class="project-card" onclick="openProject(2)">
-        <img src="https://via.placeholder.com/600x350.png?text=Project+2" alt="Project 2" />
+      <div onclick="openProject(2)" style="width:70%; max-width:800px; border-radius:20px; overflow:hidden; background-color:#400000; cursor:pointer; transition:transform 0.4s ease, box-shadow 0.4s ease;"
+           onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 30px rgba(0,0,0,0.3)';"
+           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+        <img src="https://via.placeholder.com/600x350.png?text=Project+2" alt="Project 2" style="width:100%; height:auto; display:block;" />
       </div>
-      <div class="project-card" onclick="openProject(3)">
-        <img src="https://via.placeholder.com/600x350.png?text=Project+3" alt="Project 3" />
+      <div onclick="openProject(3)" style="width:70%; max-width:800px; border-radius:20px; overflow:hidden; background-color:#400000; cursor:pointer; transition:transform 0.4s ease, box-shadow 0.4s ease;"
+           onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 30px rgba(0,0,0,0.3)';"
+           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+        <img src="https://via.placeholder.com/600x350.png?text=Project+3" alt="Project 3" style="width:100%; height:auto; display:block;" />
       </div>
     </div>
   </section>
