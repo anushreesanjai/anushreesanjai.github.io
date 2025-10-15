@@ -1,45 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Anushree Sanjai</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anushree Sanjai – Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1 class="main-title">Anushree Sanjai</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="PortfolioNavigation.html">Portfolio</a></li>
-                <li><a href="AboutPage.html">About</a></li>
-                <li><a href="ContactPage.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <nav class="navbar">
+    <a href="#home" class="nav-btn">home</a>
+    <a href="#projects" class="nav-btn">projects</a>
+    <a href="#about" class="nav-btn">about me</a>
+  </nav>
 
-    <h1 class="welcome-heading">Welcome to my portfolio</h1>
+  <section class="intro" id="home">
+    <p class="intro-text">Nice to meet you,</p>
+    <p class="intro-text"><strong>My name is Anushree Sanjai</strong></p>
+    <p class="description">
+      I design with people in mind by combining<br />
+      psychology with strategy to create solutions that<br />
+      are desirable, viable, and feasible
+    </p>
+  </section>
 
-    <main>
-        <div class="project-gallery">
-            <a href="https://scratch.mit.edu/projects/1062382224" class="project-link">
-                <img src="Scratch2.jpg" alt="Scratch Project" class="project-image">
-            </a>
-            <a href="https://editor.p5js.org/anushree.sanjai/full/dtzwWYeqf" class="project-link">
-                <img src="p5.js1.jpg" alt="p5.js Project" class="project-image">
-            </a>
-            <a href="https://docs.google.com/document/d/1LSwCWFyt4K0J4kN5ybZC61S2SROJgDasWLJ-Rkc2jTw/edit?tab=t.0" class="project-link">
-                <img src="python1.jpg" alt="Python Project" class="project-image">
-            </a>
-        </div>
-        
-    </main>
+  <section class="projects-section" id="projects">
+    <h2 class="projects-title">explore my projects</h2>
+    <div class="projects-container">
+      <div class="project-card" onclick="openProject(1)">
+        <img src="https://via.placeholder.com/600x350.png?text=Project+1" alt="Project 1" />
+      </div>
+      <div class="project-card" onclick="openProject(2)">
+        <img src="https://via.placeholder.com/600x350.png?text=Project+2" alt="Project 2" />
+      </div>
+      <div class="project-card" onclick="openProject(3)">
+        <img src="https://via.placeholder.com/600x350.png?text=Project+3" alt="Project 3" />
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <p>© 2024 Anushree Sanjai. All rights reserved.</p>
-    </footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
