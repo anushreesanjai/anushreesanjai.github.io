@@ -3,52 +3,117 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anushree Sanjai – Portfolio</title>
+  <title>Jane Doe | Design Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%23ffb703%22/><text x=%2250%22 y=%2258%22 text-anchor=%22middle%22 font-size=%2240%22 fill=%22black%22 font-family=%22Arial%22>J</text></svg>">
 </head>
-<body style="margin:0; padding:0; box-sizing:border-box; font-family:'Helvetica', Arial, sans-serif; color:white; background-color:#550000; display:flex; flex-direction:column; align-items:center; text-align:center; overflow-x:hidden;">
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="logo">Jane<span>Doe</span></a>
 
-  <nav style="display:flex; justify-content:center; gap:60px; margin-top:40px; font-family:'Helvetica', Arial, sans-serif;">
-    <a href="#home" style="background-color:#280101; color:white; border-radius:50px; padding:10px 40px; text-decoration:none; font-size:26px; transition:all 0.3s ease; font-family:'Helvetica', Arial, sans-serif;"
-       onmouseover="this.style.backgroundColor='#3a0101'; this.style.transform='translateY(-3px)';"
-       onmouseout="this.style.backgroundColor='#280101'; this.style.transform='translateY(0)';">home</a>
-    <a href="#projects" style="background-color:#280101; color:white; border-radius:50px; padding:10px 40px; text-decoration:none; font-size:26px; transition:all 0.3s ease; font-family:'Helvetica', Arial, sans-serif;"
-       onmouseover="this.style.backgroundColor='#3a0101'; this.style.transform='translateY(-3px)';"
-       onmouseout="this.style.backgroundColor='#280101'; this.style.transform='translateY(0)';">projects</a>
-    <a href="#about" style="background-color:#280101; color:white; border-radius:50px; padding:10px 40px; text-decoration:none; font-size:26px; transition:all 0.3s ease; font-family:'Helvetica', Arial, sans-serif;"
-       onmouseover="this.style.backgroundColor='#3a0101'; this.style.transform='translateY(-3px)';"
-       onmouseout="this.style.backgroundColor='#280101'; this.style.transform='translateY(0)';">about me</a>
-  </nav>
+      <nav class="nav" id="nav">
+        <ul>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
 
-  <section id="home" style="margin-top:120px; width:80%; max-width:800px; text-align:left; font-family:'Helvetica', Arial, sans-serif;">
-    <p style="font-size:32px; line-height:1.6;">Nice to meet you,</p>
-    <p style="font-size:32px; line-height:1.6;"><strong>My name is Anushree Sanjai</strong></p>
-    <p style="margin-top:40px; font-size:32px; line-height:1.6;">
-      I design with people in mind by combining<br />
-      psychology with strategy to create solutions that<br />
-      are desirable, viable, and feasible
-    </p>
-  </section>
+      <div class="actions">
+        <button id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+      </div>
 
-  <section id="projects" style="margin-top:100px; width:100%; font-family:'Helvetica', Arial, sans-serif;">
-    <h2 style="font-size:56px; margin-bottom:60px;">explore my projects</h2>
-    <div style="display:flex; flex-direction:column; gap:60px; align-items:center; padding-bottom:120px;">
-      <div onclick="openProject(1)" style="width:70%; max-width:800px; border-radius:20px; overflow:hidden; background-color:#400000; cursor:pointer; transition:transform 0.4s ease, box-shadow 0.4s ease;"
-           onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 30px rgba(0,0,0,0.3)';"
-           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-        <img src="https://via.placeholder.com/600x350.png?text=Project+1" alt="Project 1" style="width:100%; height:auto; display:block;" />
-      </div>
-      <div onclick="openProject(2)" style="width:70%; max-width:800px; border-radius:20px; overflow:hidden; background-color:#400000; cursor:pointer; transition:transform 0.4s ease, box-shadow 0.4s ease;"
-           onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 30px rgba(0,0,0,0.3)';"
-           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-        <img src="https://via.placeholder.com/600x350.png?text=Project+2" alt="Project 2" style="width:100%; height:auto; display:block;" />
-      </div>
-      <div onclick="openProject(3)" style="width:70%; max-width:800px; border-radius:20px; overflow:hidden; background-color:#400000; cursor:pointer; transition:transform 0.4s ease, box-shadow 0.4s ease;"
-           onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 30px rgba(0,0,0,0.3)';"
-           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-        <img src="https://via.placeholder.com/600x350.png?text=Project+3" alt="Project 3" style="width:100%; height:auto; display:block;" />
-      </div>
+      <button id="menuToggle" class="menu-toggle">☰</button>
     </div>
-  </section>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-text">
+          <h1>Hi, I’m <span>Jane Doe</span></h1>
+          <p>I’m a multidisciplinary designer crafting meaningful digital experiences.</p>
+          <a href="#projects" class="btn-primary">See My Work</a>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" alt="Designer workspace" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <h2>Featured Projects</h2>
+        <div class="grid">
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="UI Design project" />
+            <div class="card-body">
+              <h3>Modern Dashboard UI</h3>
+              <p>Clean and intuitive interface for SaaS analytics platform.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" alt="Branding project" />
+            <div class="card-body">
+              <h3>Creative Branding</h3>
+              <p>Bold rebranding project for a lifestyle company.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1506765515384-028b60a970df" alt="Web design project" />
+            <div class="card-body">
+              <h3>Portfolio Website</h3>
+              <p>Responsive and elegant portfolio layout for designers.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+      <div class="container about-inner">
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="Jane Doe portrait" />
+        </div>
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p>I’m a UX/UI designer passionate about creating user-centered products that blend aesthetics and usability. My experience spans web design, branding, and creative direction.</p>
+          <p>When I’m not designing, I’m exploring photography and motion graphics to expand my visual storytelling skills.</p>
+          <a href="#contact" class="btn-outline">Let’s Work Together</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2>Let’s Connect</h2>
+        <form id="contactForm">
+          <div class="form-group">
+            <input type="text" id="name" name="name" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Your Email" required />
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Send Message</button>
+          <p id="formMsg"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Jane Doe. All rights reserved.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
